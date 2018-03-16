@@ -35,6 +35,7 @@ export class NgTableComponent {
 
   @Input()
   public set columns(values:Array<any>) {
+    this._columns = [];
     values.forEach((value:any) => {
       let column = this._columns.find((col:any) => col.name === value.name);
       if (column) {
